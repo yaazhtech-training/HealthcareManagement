@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface HealthInterface {
     @PostMapping("/save")
-    String healthDetail(@RequestBody HealthInput healthInput);
+   public String healthDetail( HealthInput healthInput);
 
     String managingHealth(HealthInput healthInput);
 

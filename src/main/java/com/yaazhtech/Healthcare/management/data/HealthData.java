@@ -1,15 +1,18 @@
 package com.yaazhtech.Healthcare.management.data;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 public class HealthData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id",nullable = false)
+    private Long id;
 
     private String patientName;
-    private String PatientId;
+    private String patientId;
     private String gender;
     private String dateOfBirth;
     private String adress;
@@ -29,11 +32,11 @@ public class HealthData {
     }
 
     public String getPatientId() {
-        return PatientId;
+        return patientId;
     }
 
     public void setPatientId(String patientId) {
-        PatientId = patientId;
+        this.patientId = patientId;
     }
 
     public String getGender() {

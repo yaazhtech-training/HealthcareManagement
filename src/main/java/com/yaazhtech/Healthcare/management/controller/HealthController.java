@@ -17,7 +17,6 @@ public class HealthController implements HealthInterface {
     @Autowired
     HealthRepository healthRepository;
     @Override
-    @PostMapping("/save")
     public String healthDetail(@RequestBody HealthInput healthInput){
         HealthData healthData=new HealthData();
         healthData.setPatientName(healthInput.getPatientName());
@@ -30,7 +29,7 @@ public class HealthController implements HealthInterface {
         healthData.setAllergies(healthInput.getAllergies());
         healthRepository.save(healthData);
        // log.info("i am saved in repository");
-        return("Health data have been saved successfully");
+        return "Health data have been saved successfully";
 
     }
     @Override

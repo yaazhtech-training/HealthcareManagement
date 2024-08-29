@@ -2,7 +2,7 @@ package com.yaazhtech.Healthcare.management.model;
 
 public class HealthInput {
     private String patientName;
-    private String PatientId;
+    private String patientId;
     private String gender;
     private String dateOfBirth;
     private String adress;
@@ -21,11 +21,11 @@ public class HealthInput {
     }
 
     public String getPatientId() {
-        return PatientId;
+        return patientId;
     }
 
     public void setPatientId(String patientId) {
-        PatientId = patientId;
+        this.patientId = patientId;
     }
 
     public String getGender() {
